@@ -248,18 +248,25 @@ article{
 }
 
 .rec2 {
-    height: 216px;
+    height: 91px;
     width: 255px;
     background-color: #ffffff;
     left: 50px;
     top: 1474px;
     margin-left: 50px;
-    margin-top: 120px;
-    padding-top: 11px;
+    margin-top: 123px;
+    padding-top: 141px;
     display: inline-block;
-    line-height: 35px;
+    line-height: 13px;
     text-align: center;
+}
+a.rec2{
+    color: #000000;
+}
 
+a {
+    text-decoration: none;
+    color: #000000;
 }
 
 
