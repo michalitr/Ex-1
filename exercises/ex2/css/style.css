@@ -260,13 +260,11 @@ article{
     line-height: 13px;
     text-align: center;
 }
-a.rec2{
-    color: #000000;
-}
 
 a {
     text-decoration: none;
     color: #000000;
+    font-weight: bold;
 }
 
 
