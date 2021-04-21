@@ -26,6 +26,11 @@ header, main, footer nav, aside,section{
     width: 422px;
     margin: 0px auto;
 }
+#wrapper3 {
+    width: 1000px;
+    margin: 0px auto;
+    
+}
 
 header{
     background-color: #b56818;
@@ -342,13 +347,65 @@ footer{
 
 
 
+/* Layout 3 addons  */
+#plus{
+    pointer-events: all;
+    background-image: url(../images/plus.svg);
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 30%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 30%;
+
+
+}
+
+.lay3 {
+    position: absolute;
+    top: 50%;
+    outline: 2px solid #000;
+    font-size: 0;
+    margin-left: 10%;
+    height: 960px;
+    width: 960px;
+    padding: 0;
+    border: none;
+}
+
+.tab {
+
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: 1px solid #000;
+    display: inline-block;
+}
 
 
 
 
 
 
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+#Bun {
+    background-image: url(../images/munch3.png);
+    background-repeat: no-repeat;
+  max-width:100%;
+max-height:100%;
+    /*border: none;*/
+    /*outline: 1px solid #000;*/
+    /*display: inline-block;*/
+}
 
 
-
-
+#star{
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 84px;
+    margin-left: auto;
+}
