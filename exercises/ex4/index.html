@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Michal Tamir</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400i" rel="stylesheet">
+  <!--  <link rel="stylesheet" href="css/style.css">-->
+  <link rel="stylesheet" href="css/style.css">
+  <!--  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+  <!--  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script> -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+
+  <script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+
+
+<!-- <iframe src="audio/Walt Disney Theme.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+</iframe>  -->
+
+<iframe src="audio/Walt-Disney-Theme.mp3" allow="autoplay;" style="display:none"></iframe>
+  <audio controls autoplay loop preload="auto">
+    <source src="audio/Walt-Disney-Theme.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
+  
+  <!-- <audio controls loop id="YGAFIM">
+    <source src="audio/You got a friend in me.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>  -->
+
+<!--<?php-->
+<!--// define variables and set to empty values-->
+<!--$nameErr = $passErr = $genderErr = "";-->
+<!--$name = $email = $gender = $pass = "";-->
+
+<!--if ($_SERVER["REQUEST_METHOD"] == "GET") {-->
+<!--    if (empty($_GET["fullname"])) {-->
+<!--        $nameErr = "Name is required";-->
+<!--    } else {-->
+<!--        $name = test_input($_GET["fullname"]);-->
+<!--        // check if name only contains letters and whitespace-->
+<!--        if (!preg_match("/^[a-zA-Z-' ]*$/", $name)) {-->
+<!--            $nameErr = "Only letters and white space allowed";-->
+<!--        }-->
+<!--    }-->
+
+
+<!--    if (!empty($_GET["pass"])) {-->
+
+<!--        $pass = test_input($_GET["pass"]);-->
+<!--        // check if name only contains letters and whitespace-->
+<!--        if (!preg_match("/^[a-zA-Z-' ]*$/", $pass)) {-->
+<!--            $passErr = "Only letters and white space allowed";-->
+<!--        }-->
+<!--    }-->
+
+<!--    if (empty($_GET["age"])) {-->
+<!--        $emailErr = "Age is required";-->
+<!--    }-->
+
+
+<!--}-->
+
+<!--function test_input($data) {-->
+<!--    $data = trim($data);-->
+<!--    $data = stripslashes($data);-->
+<!--    $data = htmlspecialchars($data);-->
+<!--    return $data;-->
+<!--}-->
+<!--?>-->
+
+<div>
+
+
+  <div class="container">
+    <form method="get" autocomplete="on" id="signup-form" name="signup-form" class="signup-form" action="http://se.shenkar.ac.il/teach/web1/2021/get_form3.php">
+      <h2 class="titleSign">Sign up </h2>
+      
+      <h2 class="titleSign">Join Disney's Team!!</h2>
+      <br>
+
+      <input type="text" class="form-styling" name="fullName" id="fullName" placeholder="Character Name">
+
+      <span class="error">* <?php echo $nameErr;?></span>
+
+      <br>
+
+      <input type="text" class="form-styling" name="pass" id="password" placeholder="Password">
+      <span toggle="#password" class="error">* <?php echo $passErr;?></span>
+      <!--            <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>-->
+      <br>
+
+
+      <input type="email" class="form-styling" name="mail" id="email" placeholder="Email">
+      <br>
+
+      <input type="url" class="form-styling" name="website" id="website" placeholder="Character Website">
+      <br>
+
+
+      <input type="tel" class="form-styling" name="phone" id="phone" placeholder="Phone">
+
+      <br>
+
+      <input type="number" class="form-styling" name="coffee" id="coffe" placeholder="Co-op with Disney's Team">
+      <br>
+
+      <!--  <label>Tempeture:-->
+      <!--      <input type="range" class="form-styling" name="temper" id="temper" placeholder="Temper">-->
+      <!--    </label>-->
+        <br>
+      <span id="rangeValue">Evil/Hero:</span>
+      <Input class="range" type="range" name="temper"  onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"></Input>
+      <br>
+      <label id="labelDe">Description :</lable>
+        <br>
+
+      <textarea name="address" rows="5" cols="85" id="areaText"></textarea>
+      
+      <br>
+      <br>
+
+      <span>Suits for:</span>
+      
+        <input type="checkbox" class="form-styling" name="interests[]" value="Space world">
+        <lable>Space world</lable>
+      
+        <input type="checkbox" class="form-styling" name="interests[]" value="Classic stories">
+        <lable>Classic stories</lable>
+     
+        <input type="checkbox" class="form-styling" name="interests[]" value="Castles world">
+        <lable>Castles world</lable>
+      
+        <input type="checkbox" class="form-styling" name="interests[]" value="Fairies world">
+        <lable>Fairies world</lable>
+      <br>
+
+
+      <br>
+      <span class="gender">Gender:</span><br>
+      
+        <input class="form-styling" type="radio" id="male" name="gender" value="male">
+        <label>Male</label>
+      
+        <input class="form-styling" type="radio" id="female" name="gender" value="female" checked="">
+        <label> Female</label>
+      <br>
+
+
+
+      <label>Age:
+        <select name="age" required>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24" selected="">24</option>
+        </select>
+      </label>
+      <br>
+
+      <br>
+      <div class="form-group">
+        <button type="submit" id="randomSubmit" name="submit" id="submit" class="submit-button" value="Submit" onclick="validInputs">Submit</button>
+      </div>
+      <br>
+    </form>
+
+  </div>
+</div>
+<div class="cartoon hb">
+  <div class="sky r"></div>
+  <div class="cloud cloud-1 ha"></div>
+  <div class="cloud cloud-2 ha"></div>
+  <div class="shadow"></div>
+  <div class="minar-top minar-top-2"></div>
+  <div class="minar-top"></div>
+  <div class="minar ha"></div>
+  <div class="tower tower-5 tower-6 tower-7"></div>
+
+  <div class="house ha"></div>
+
+  <div class="main-roof-behind"></div>
+  <div class="main-roof ha"></div>
+  <div class="main-top"></div>
+
+  <div class="flag flag-4"></div>
+  <div class="main-tower-roof"></div>
+  <div class="main-tower"></div>
+  <div class="main ha"></div>
+  <div class="tower tower-3 tower-3a"></div>
+  <div class="wall ha"></div>
+  <div class="tower tower-1"></div>
+  <div class="tower tower-2"></div>
+  <div class="tower tower-3 tower-3b"></div>
+  <div class="tower tower-4"></div>
+  <div class="tower tower-5 tower-6"></div>
+  <div class="tower tower-5"></div>
+  <div class="brick"></div>
+
+  <div class="room-1"></div>
+  <div class="room-2"></div>
+  <div class="room-3 ha"></div>
+  <div class="window"></div>
+  <div class="window-curved"></div>
+  <div class="roof roof-1"></div>
+  <div class="roof roof-2"></div>
+  <div class="flag flag-1"></div>
+  <div class="flag flag-2"></div>
+  <div class="flag flag-3"></div>
+  <div class="flag-pole-top"></div>
+  <div class="flag-pole"></div>
+  <div class="house-roof"></div>
+  <div class="front-gate ha">
+    <div class="gate"></div>
+    <div class="balcony ha"></div>
+    <div class="triangle ha"></div>
+    <div class="front-poles"></div>
+  </div>
+
+</div>
+<!--Qoute box-->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<!-- above link is for icons
+  below link is for disney font -->
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/waltograph" type="text/css"/> 
+
+<br></br>
+<h1>Random Disney Quote Generator</h1><br>
+
+<div class="quoteBox"><br>
+	
+	<div class="left">
+		<i class="fa fa-quote-left" aria-hidden="true"></i></div>  
+
+  <div class="message">Quote goes here</div>
+
+	<div class="right">
+		<i class="fa fa-quote-right" aria-hidden="true"></i></div>
+  
+  <div id="author">- author</div>
+	</div>
+  <br>
+
+  
+	<button id="random">Random Quote</button>
+  <div class="box_anim">
+
+    <div class="mouse mouse-lavender"></div>
+    <div class="mouse mouse-mint"></div>
+    <div class="mouse mouse-purple"></div>
+    
+  </div>
+
+
+  <div id="castle">
+    <div id="table"></div>
+    <div class="shade-wrap hov" id="main">
+        <div id="flower-wrap">
+            <div id="stem"></div>
+            <div id="petal1"></div>
+            <div id="petal2"></div>
+            <div id="petal3"></div>
+            <div id="petal4"></div>
+            <div id="petal5"></div>
+            <div id="falling-petal"></div>
+            <div id="leaf1"></div>
+            <div id="leaf2"></div>
+        </div>
+    </div>
+    <div class="shade-wrap" id="sub">
+        <div id="shade-main-reflections"></div>
+        <div id="shade-main">
+            <div id="shade-handle-big"></div>
+            <div id="shade-handle-small"></div>
+            <div id="top-reflection"></div>
+            <div id="float-reflection">
+                <div id="float-animation"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer></footer>
+
+</body>
+</html>
