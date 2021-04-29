@@ -34,33 +34,23 @@ function getQuote() {
 }
 
 
-// var youGotAFriendInMe = document.getElementById("YGAFIM");
-// var themeAud = document.getElementById("Walt Disney Theme.mp3");
-// them
-// if (themeAud.state === 'suspended') {
-//     themeAud.resume();
-// }
-// themeAud.onended = function() {
-//     youGotAFriendInMe.onplay;
-// };
-
 function validInputs() {
   var msg = "";
-  var value = document.forms["signup-form"]["fullname"].value;
+  var value = document.forms["signup-form"]["fullName"].value;
   if (value==""){
-      msg = "Fullname is required";
-      document.getElementById("messageErr").innerHTML = msg;
+      msg = "Character name is required";
+      document.getElementById("errormsg").innerHTML = msg;
       return false;
   }
   if (value.indexOf(" ")==-1||value.length<3) {
-      msg="Full name must have least one space!\n";
-      document.getElementById("messageErr").innerHTML = msg;
+      msg="Character name must have least one space!\n";
+      document.getElementById("errormsg").innerHTML = msg;
       return false;
   }
   value = document.forms["signup-form"]["pass"].value;
   if (value.length<8 ) {
       msg="Password have to contain at least 8 charcters!\n";
-      document.getElementById("messageErr").innerHTML = msg;
+      document.getElementById("errormsg").innerHTML = msg;
       return false
   }
 
@@ -70,16 +60,18 @@ function validInputs() {
   if (value == 0){
 
       msg="must check one interest!\n";
-      document.getElementById("messageErr").innerHTML = msg;
+      document.getElementById("errormsg").innerHTML = msg;
       return false
   }
 
   value = document.forms["signup-form"]["phone"].value;
   if (value.length>10 || value.length<9 || isNaN(value)) {
       msg="Phone is between 9 to 10 digits without charcters!\n";
-      document.getElementById("messageErr").innerHTML = msg;
+      document.getElementById("errormsg").innerHTML = msg;
       return false
   }
 
   return true;
 };
+
+  document.getElementsByClassName("iframeAudio")[0].play();
