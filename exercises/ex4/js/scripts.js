@@ -16,6 +16,12 @@ $(document).ready(function() {
 		});
 });
 
+var obj = {};
+obj["wins"] = 123;
+var x = obj.wins;
+console.log(x);
+
+
 var quotes = [];
 quotes.push(["Sometimes the right path is not the easiest path.", "Pocahontas"]);
 quotes.push(["Don't just fly, soar.", "Dumbo"]);
